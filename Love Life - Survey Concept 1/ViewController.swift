@@ -8,18 +8,28 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-    override func viewDidLoad() {
+class ViewController: UIViewController
+{
+    @IBOutlet weak var sectionOneScore: UILabel!
+    @IBOutlet weak var sectionTwoScore: UILabel!
+    @IBOutlet weak var sectionThreeScore: UILabel!
+    @IBOutlet weak var sectionFourScore: UILabel!
+    @IBOutlet weak var imageSelectionOne: UIImageView!
+    @IBOutlet weak var imageSelectionTwo: UIImageView!
+    @IBOutlet weak var imageSelectionThree: UIImageView!
+    @IBOutlet weak var imageSelectionFour: UIImageView!
+    @IBOutlet weak var imageSelectionFive: UIImageView!
+    @IBOutlet weak var actionButton: UIButton!
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    @IBAction func buttonAction()
+    {
+        
     }
-
-
 }
 
