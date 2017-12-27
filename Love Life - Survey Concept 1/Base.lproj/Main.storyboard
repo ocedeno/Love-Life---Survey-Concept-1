@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mfD-YU-8CA">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -19,9 +19,80 @@
     </customFonts>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="Q8l-dB-59M">
+            <objects>
+                <viewController id="mfD-YU-8CA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QIf-W9-5Oc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Vmb-R4-QtT">
+                                <rect key="frame" x="32" y="60" width="311" height="686"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98a-Iu-cbD">
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="111.66666666666667"/>
+                                        <color key="backgroundColor" red="0.9192116857" green="0.32311135698013804" blue="0.36458680549898947" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                        <state key="normal" title="Sight">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" id="11d-BF-Knk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtA-zH-NjL">
+                                        <rect key="frame" x="0.0" y="143.66666666666666" width="311" height="111.66666666666666"/>
+                                        <color key="backgroundColor" red="0.9192116857" green="0.42028038256608435" blue="0.43449962604150133" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                        <state key="normal" title="Hear">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC2-82-5sO">
+                                        <rect key="frame" x="0.0" y="287.33333333333331" width="311" height="111.33333333333331"/>
+                                        <color key="backgroundColor" red="0.9192116857" green="0.59064242120344201" blue="0.65545581404564679" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                        <state key="normal" title="Smell">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOZ-or-bl2">
+                                        <rect key="frame" x="0.0" y="430.66666666666669" width="311" height="111.66666666666669"/>
+                                        <color key="backgroundColor" red="0.9192116857" green="0.69241609659488279" blue="0.74744971436458751" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                        <state key="normal" title="Touch">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BK-oN-LEp">
+                                        <rect key="frame" x="0.0" y="574.33333333333337" width="311" height="111.66666666666663"/>
+                                        <color key="backgroundColor" red="0.9192116857" green="0.76112151234859393" blue="0.77590586213940316" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                        <state key="normal" title="Taste">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.9192116857" green="0.81038290999999996" blue="0.78602331169999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="Vmb-R4-QtT" firstAttribute="top" secondItem="mao-4a-KSc" secondAttribute="top" constant="16" id="HHD-BM-MSX"/>
+                            <constraint firstItem="mao-4a-KSc" firstAttribute="bottom" secondItem="Vmb-R4-QtT" secondAttribute="bottom" constant="32" id="Ib8-ke-rbi"/>
+                            <constraint firstItem="mao-4a-KSc" firstAttribute="trailing" secondItem="Vmb-R4-QtT" secondAttribute="trailing" constant="32" id="Kgy-dq-1GM"/>
+                            <constraint firstItem="Vmb-R4-QtT" firstAttribute="leading" secondItem="mao-4a-KSc" secondAttribute="leading" constant="32" id="U6Q-cw-Pub"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="mao-4a-KSc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GSD-yP-Uco" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-666" y="142"/>
+        </scene>
+        <!--Sight View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Love_Life___Survey_Concept_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SightViewController" customModule="Love_Life___Survey_Concept_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -241,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+            <point key="canvasLocation" x="-2078" y="-158"/>
         </scene>
     </scenes>
 </document>

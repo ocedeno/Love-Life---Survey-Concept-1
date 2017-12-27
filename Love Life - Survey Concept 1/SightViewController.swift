@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  SightViewController.swift
 //  Love Life - Survey Concept 1
 //
 //  Created by Octavio Cedeno on 12/24/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController
+class SightViewController: UIViewController
 {
     @IBOutlet weak var sectionOneScore: UILabel!
     @IBOutlet weak var sectionTwoScore: UILabel!
@@ -69,10 +69,13 @@ class ViewController: UIViewController
             DispatchQueue.main.async {
                 self.actionButton.setTitle("Next", for: .normal)
             }
-            return self.setupImageSelectionView()
+            
+            self.setupImageSelectionView()
+            
+            return dismiss(animated: true, completion: nil)
         }
         
-        guard ViewController.placementArray.contains("5") else
+        guard SightViewController.placementArray.contains("5") else
         {
             let alert = UIAlertController(title: "Complete Survey", message: "You have not finished this section. Make sure you have selected all 5 images in order of your preference.", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
@@ -89,7 +92,7 @@ class ViewController: UIViewController
         {
         case UIImage(named: "landscape1")!:
             
-            ViewController.placementArray.removeAll()
+            SightViewController.placementArray.removeAll()
             
             DispatchQueue.main.async {
                 self.imageSelectionOne.alpha = 1
@@ -112,7 +115,7 @@ class ViewController: UIViewController
             }
         case UIImage(named: "painting1")!:
             
-            ViewController.placementArray.removeAll()
+            SightViewController.placementArray.removeAll()
             
             DispatchQueue.main.async {
                 self.imageSelectionOne.alpha = 1
@@ -135,7 +138,7 @@ class ViewController: UIViewController
             }
         case UIImage(named: "color1")!:
             
-            ViewController.placementArray.removeAll()
+            SightViewController.placementArray.removeAll()
             
             DispatchQueue.main.async {
                 self.imageSelectionOne.alpha = 1
@@ -158,20 +161,20 @@ class ViewController: UIViewController
             }
         case UIImage(named: "shape1")!:
             
-            ViewController.placementArray.removeAll()
+            SightViewController.placementArray.removeAll()
             
-            if ViewController.userOneIsActive
+            if SightViewController.userOneIsActive
             {
                 self.actionButton.setTitle("User 2 Select", for: .normal)
-                ViewController.userOneIsActive = false
+                SightViewController.userOneIsActive = false
             }
             else
             {
                 let x = getPoints()
                 DispatchQueue.main.async {
-                    self.actionButton.setTitle("\(x)", for: .normal)
+                    self.actionButton.setTitle("\(x) pts - Move On", for: .normal)
                 }
-                ViewController.userOneIsActive = true
+                SightViewController.userOneIsActive = true
             }
            
             DispatchQueue.main.async {
@@ -203,28 +206,28 @@ class ViewController: UIViewController
         sender.alpha = 0.50
         sender.isEnabled = false
         
-        if ViewController.userOneIsActive
+        if SightViewController.userOneIsActive
         {
             let image = sender.currentBackgroundImage!
             if image == landscape1 || image == paint1 || image == color1 || image == shape1
             {
-                ViewController.userOneRespones.append("A")
+                SightViewController.userOneRespones.append("A")
             }
             else if image == landscape2 || image == paint2 || image == color2 || image == shape2
             {
-                ViewController.userOneRespones.append("B")
+                SightViewController.userOneRespones.append("B")
             }
             else if image == landscape3 || image == paint3 || image == color3 || image == shape3
             {
-                ViewController.userOneRespones.append("C")
+                SightViewController.userOneRespones.append("C")
             }
             else if image == landscape4 || image == paint4 || image == color4 || image == shape4
             {
-                ViewController.userOneRespones.append("D")
+                SightViewController.userOneRespones.append("D")
             }
             else if image == landscape5 || image == paint5 || image == color5 || image == shape5
             {
-                ViewController.userOneRespones.append("E")
+                SightViewController.userOneRespones.append("E")
             }
         }
         else
@@ -232,42 +235,42 @@ class ViewController: UIViewController
             let image = sender.currentBackgroundImage!
             if image == landscape1 || image == paint1 || image == color1 || image == shape1
             {
-                ViewController.userTwoResponses.append("A")
+                SightViewController.userTwoResponses.append("A")
             }
             else if image == landscape2 || image == paint2 || image == color2 || image == shape2
             {
-                ViewController.userTwoResponses.append("B")
+                SightViewController.userTwoResponses.append("B")
             }
             else if image == landscape3 || image == paint3 || image == color3 || image == shape3
             {
-                ViewController.userTwoResponses.append("C")
+                SightViewController.userTwoResponses.append("C")
             }
             else if image == landscape4 || image == paint4 || image == color4 || image == shape4
             {
-                ViewController.userTwoResponses.append("D")
+                SightViewController.userTwoResponses.append("D")
             }
             else if image == landscape5 || image == paint5 || image == color5 || image == shape5
             {
-                ViewController.userTwoResponses.append("E")
+                SightViewController.userTwoResponses.append("E")
             }
         }
         
-        if ViewController.placementArray.count == 0
+        if SightViewController.placementArray.count == 0
         {
             DispatchQueue.main.async {
                 sender.setTitle("1", for: .normal)
-                ViewController.placementArray.append("1")
+                SightViewController.placementArray.append("1")
             }
         }
-        else if ViewController.placementArray.contains("1")
+        else if SightViewController.placementArray.contains("1")
         {
-            if ViewController.placementArray.contains("2")
+            if SightViewController.placementArray.contains("2")
             {
-                if ViewController.placementArray.contains("3")
+                if SightViewController.placementArray.contains("3")
                 {
-                    if ViewController.placementArray.contains("4")
+                    if SightViewController.placementArray.contains("4")
                     {
-                        if ViewController.placementArray.contains("5")
+                        if SightViewController.placementArray.contains("5")
                         {
                             let alert = UIAlertController(title: "Reset Responses?", message: "Would you like to reset your responses and try again?", preferredStyle: .alert)
                             alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
@@ -290,7 +293,7 @@ class ViewController: UIViewController
                             DispatchQueue.main.async {
                                 sender.setTitle("5", for: .normal)
                             }
-                            ViewController.placementArray.append("5")
+                            SightViewController.placementArray.append("5")
                         }
                     }
                     else
@@ -298,7 +301,7 @@ class ViewController: UIViewController
                         DispatchQueue.main.async {
                             sender.setTitle("4", for: .normal)
                         }
-                        ViewController.placementArray.append("4")
+                        SightViewController.placementArray.append("4")
                     }
                 }
                 else
@@ -306,7 +309,7 @@ class ViewController: UIViewController
                     DispatchQueue.main.async {
                         sender.setTitle("3", for: .normal)
                     }
-                    ViewController.placementArray.append("3")
+                    SightViewController.placementArray.append("3")
                 }
             }
             else
@@ -314,7 +317,7 @@ class ViewController: UIViewController
                 DispatchQueue.main.async {
                     sender.setTitle("2", for: .normal)
                 }
-                ViewController.placementArray.append("2")
+                SightViewController.placementArray.append("2")
             }
             
         }
@@ -322,7 +325,7 @@ class ViewController: UIViewController
     
     func setupImageSelectionView()
     {
-        ViewController.placementArray.removeAll()
+        SightViewController.placementArray.removeAll()
         
         self.imageSelectionOne.isEnabled = true
         self.imageSelectionTwo.isEnabled = true
@@ -357,15 +360,15 @@ class ViewController: UIViewController
     {
         var totalPoints:Int = 0
         
-        let user1GroupA = ViewController.userOneRespones[0...4]
-        let user1GroupB = ViewController.userOneRespones[5...9]
-        let user1GroupC = ViewController.userOneRespones[10...14]
-        let user1GroupD = ViewController.userOneRespones[15...19]
+        let user1GroupA = SightViewController.userOneRespones[0...4]
+        let user1GroupB = SightViewController.userOneRespones[5...9]
+        let user1GroupC = SightViewController.userOneRespones[10...14]
+        let user1GroupD = SightViewController.userOneRespones[15...19]
         
-        let user2GroupA = ViewController.userTwoResponses[0...4]
-        let user2GroupB = ViewController.userTwoResponses[5...9]
-        let user2GroupC = ViewController.userTwoResponses[10...14]
-        let user2GroupD = ViewController.userTwoResponses[15...19]
+        let user2GroupA = SightViewController.userTwoResponses[0...4]
+        let user2GroupB = SightViewController.userTwoResponses[5...9]
+        let user2GroupC = SightViewController.userTwoResponses[10...14]
+        let user2GroupD = SightViewController.userTwoResponses[15...19]
         
         let groupAPoints = self.getPointsMethod(masterArray: user1GroupA, comparerArray: user2GroupA)
         self.sectionOneScore.text = String(groupAPoints)
