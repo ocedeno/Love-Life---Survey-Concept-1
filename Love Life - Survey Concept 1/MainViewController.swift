@@ -60,8 +60,10 @@ class MainViewController: UIViewController
         
         if MainViewController.sightScore != 0 && MainViewController.smellScore != 0 && MainViewController.soundScore != 0 && MainViewController.tasteScore != 0 && MainViewController.touchScore != 0
         {
-            totalPointsLabel.text = String((MainViewController.sightScore + MainViewController.smellScore + MainViewController.soundScore + MainViewController.tasteScore + MainViewController.touchScore) / 5.0) + " - average score"
-            
+            let addedScore: Double = Double(MainViewController.sightScore + MainViewController.smellScore + MainViewController.soundScore + MainViewController.tasteScore + MainViewController.touchScore)
+            let message = String(addedScore / 5.0)
+            let finalMessage = message + " - average score"
+            totalPointsLabel.text = finalMessage
         }
     }
 }
