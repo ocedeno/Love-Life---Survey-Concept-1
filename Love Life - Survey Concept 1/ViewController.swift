@@ -14,22 +14,393 @@ class ViewController: UIViewController
     @IBOutlet weak var sectionTwoScore: UILabel!
     @IBOutlet weak var sectionThreeScore: UILabel!
     @IBOutlet weak var sectionFourScore: UILabel!
-    @IBOutlet weak var imageSelectionOne: UIImageView!
-    @IBOutlet weak var imageSelectionTwo: UIImageView!
-    @IBOutlet weak var imageSelectionThree: UIImageView!
-    @IBOutlet weak var imageSelectionFour: UIImageView!
-    @IBOutlet weak var imageSelectionFive: UIImageView!
+    @IBOutlet weak var imageSelectionOne: UIButton!
+    @IBOutlet weak var imageSelectionTwo: UIButton!
+    @IBOutlet weak var imageSelectionThree: UIButton!
+    @IBOutlet weak var imageSelectionFour: UIButton!
+    @IBOutlet weak var imageSelectionFive: UIButton!
     @IBOutlet weak var actionButton: UIButton!
+    
+    static var placementArray = [String]()
+    static var userOneRespones = [String]()
+    static var userTwoResponses = [String]()
+    static var userOneIsActive: Bool = true
+    
+    let paint1 = UIImage(named: "painting1")!
+    let paint2 = UIImage(named: "painting2")!
+    let paint3 = UIImage(named: "painting3")!
+    let paint4 = UIImage(named: "painting4")!
+    let paint5 = UIImage(named: "painting5")!
+    
+    let color1 = UIImage(named: "color1")!
+    let color2 = UIImage(named: "color2")!
+    let color3 = UIImage(named: "color3")!
+    let color4 = UIImage(named: "color4")!
+    let color5 = UIImage(named: "color5")!
+    
+    let shape1 = UIImage(named: "shape1")!
+    let shape2 = UIImage(named: "shape2")!
+    let shape3 = UIImage(named: "shape3")!
+    let shape4 = UIImage(named: "shape4")!
+    let shape5 = UIImage(named: "shape5")!
+    
+    let landscape1 = UIImage(named: "landscape1")!
+    let landscape2 = UIImage(named: "landscape2")!
+    let landscape3 = UIImage(named: "landscape3")!
+    let landscape4 = UIImage(named: "landscape4")!
+    let landscape5 = UIImage(named: "landscape5")!
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
+        self.setupImageSelectionView()
     }
     
-    @IBAction func buttonAction()
+    @IBAction func buttonSelected()
     {
+        guard ViewController.placementArray.contains("5") else
+        {
+            let alert = UIAlertController(title: "Complete Survey", message: "You have not finished this section. Make sure you have selected all 5 images in order of your preference.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Okay", style: .cancel, handler: nil))
+            return self.present(alert, animated: true, completion: nil)
+        }
         
+        self.imageSelectionOne.isEnabled = true
+        self.imageSelectionTwo.isEnabled = true
+        self.imageSelectionThree.isEnabled = true
+        self.imageSelectionFour.isEnabled = true
+        self.imageSelectionFive.isEnabled = true
+        
+        switch self.imageSelectionOne.currentBackgroundImage!
+        {
+        case UIImage(named: "landscape1")!:
+            
+            ViewController.placementArray.removeAll()
+            
+            DispatchQueue.main.async {
+                self.imageSelectionOne.alpha = 1
+                self.imageSelectionTwo.alpha = 1
+                self.imageSelectionThree.alpha = 1
+                self.imageSelectionFour.alpha = 1
+                self.imageSelectionFive.alpha = 1
+                
+                self.imageSelectionOne.setBackgroundImage(self.paint1, for: .normal)
+                self.imageSelectionTwo.setBackgroundImage(self.paint2, for: .normal)
+                self.imageSelectionThree.setBackgroundImage(self.paint3, for: .normal)
+                self.imageSelectionFour.setBackgroundImage(self.paint4, for: .normal)
+                self.imageSelectionFive.setBackgroundImage(self.paint5, for: .normal)
+                
+                self.imageSelectionOne.setTitle("", for: .normal)
+                self.imageSelectionTwo.setTitle("", for: .normal)
+                self.imageSelectionThree.setTitle("", for: .normal)
+                self.imageSelectionFour.setTitle("", for: .normal)
+                self.imageSelectionFive.setTitle("", for: .normal)
+            }
+        case UIImage(named: "painting1")!:
+            
+            ViewController.placementArray.removeAll()
+            
+            DispatchQueue.main.async {
+                self.imageSelectionOne.alpha = 1
+                self.imageSelectionTwo.alpha = 1
+                self.imageSelectionThree.alpha = 1
+                self.imageSelectionFour.alpha = 1
+                self.imageSelectionFive.alpha = 1
+                
+                self.imageSelectionOne.setBackgroundImage(self.color1, for: .normal)
+                self.imageSelectionTwo.setBackgroundImage(self.color2, for: .normal)
+                self.imageSelectionThree.setBackgroundImage(self.color3, for: .normal)
+                self.imageSelectionFour.setBackgroundImage(self.color4, for: .normal)
+                self.imageSelectionFive.setBackgroundImage(self.color5, for: .normal)
+                
+                self.imageSelectionOne.setTitle("", for: .normal)
+                self.imageSelectionTwo.setTitle("", for: .normal)
+                self.imageSelectionThree.setTitle("", for: .normal)
+                self.imageSelectionFour.setTitle("", for: .normal)
+                self.imageSelectionFive.setTitle("", for: .normal)
+            }
+        case UIImage(named: "color1")!:
+            
+            ViewController.placementArray.removeAll()
+            
+            DispatchQueue.main.async {
+                self.imageSelectionOne.alpha = 1
+                self.imageSelectionTwo.alpha = 1
+                self.imageSelectionThree.alpha = 1
+                self.imageSelectionFour.alpha = 1
+                self.imageSelectionFive.alpha = 1
+                
+                self.imageSelectionOne.setBackgroundImage(self.shape1, for: .normal)
+                self.imageSelectionTwo.setBackgroundImage(self.shape2, for: .normal)
+                self.imageSelectionThree.setBackgroundImage(self.shape3, for: .normal)
+                self.imageSelectionFour.setBackgroundImage(self.shape4, for: .normal)
+                self.imageSelectionFive.setBackgroundImage(self.shape5, for: .normal)
+                
+                self.imageSelectionOne.setTitle("", for: .normal)
+                self.imageSelectionTwo.setTitle("", for: .normal)
+                self.imageSelectionThree.setTitle("", for: .normal)
+                self.imageSelectionFour.setTitle("", for: .normal)
+                self.imageSelectionFive.setTitle("", for: .normal)
+            }
+        case UIImage(named: "shape1")!:
+            
+            ViewController.placementArray.removeAll()
+            
+            if ViewController.userOneIsActive
+            {
+                ViewController.userOneIsActive = false
+            }
+            else
+            {
+                
+                debugPrint(ViewController.userOneRespones)
+                debugPrint(ViewController.userTwoResponses)
+                print("\n\n")
+                let x = getPoints()
+                debugPrint(x)
+                ViewController.userOneIsActive = true
+            }
+           
+            DispatchQueue.main.async {
+                self.imageSelectionOne.alpha = 1
+                self.imageSelectionTwo.alpha = 1
+                self.imageSelectionThree.alpha = 1
+                self.imageSelectionFour.alpha = 1
+                self.imageSelectionFive.alpha = 1
+                
+                self.imageSelectionOne.setBackgroundImage(self.landscape1, for: .normal)
+                self.imageSelectionTwo.setBackgroundImage(self.landscape2, for: .normal)
+                self.imageSelectionThree.setBackgroundImage(self.landscape3, for: .normal)
+                self.imageSelectionFour.setBackgroundImage(self.landscape4, for: .normal)
+                self.imageSelectionFive.setBackgroundImage(self.landscape5, for: .normal)
+                
+                self.imageSelectionOne.setTitle("", for: .normal)
+                self.imageSelectionTwo.setTitle("", for: .normal)
+                self.imageSelectionThree.setTitle("", for: .normal)
+                self.imageSelectionFour.setTitle("", for: .normal)
+                self.imageSelectionFive.setTitle("", for: .normal)
+            }
+        default:
+            break
+        }
+    }
+    
+    @IBAction func makeSelection(sender: UIButton)
+    {
+        sender.alpha = 0.50
+        sender.isEnabled = false
+        
+        if ViewController.userOneIsActive
+        {
+            let image = sender.currentBackgroundImage!
+            if image == landscape1 || image == paint1 || image == color1 || image == shape1
+            {
+                ViewController.userOneRespones.append("A")
+            }
+            else if image == landscape2 || image == paint2 || image == color2 || image == shape2
+            {
+                ViewController.userOneRespones.append("B")
+            }
+            else if image == landscape3 || image == paint3 || image == color3 || image == shape3
+            {
+                ViewController.userOneRespones.append("C")
+            }
+            else if image == landscape4 || image == paint4 || image == color4 || image == shape4
+            {
+                ViewController.userOneRespones.append("D")
+            }
+            else if image == landscape5 || image == paint5 || image == color5 || image == shape5
+            {
+                ViewController.userOneRespones.append("E")
+            }
+        }
+        else
+        {
+            let image = sender.currentBackgroundImage!
+            if image == landscape1 || image == paint1 || image == color1 || image == shape1
+            {
+                ViewController.userTwoResponses.append("A")
+            }
+            else if image == landscape2 || image == paint2 || image == color2 || image == shape2
+            {
+                ViewController.userTwoResponses.append("B")
+            }
+            else if image == landscape3 || image == paint3 || image == color3 || image == shape3
+            {
+                ViewController.userTwoResponses.append("C")
+            }
+            else if image == landscape4 || image == paint4 || image == color4 || image == shape4
+            {
+                ViewController.userTwoResponses.append("D")
+            }
+            else if image == landscape5 || image == paint5 || image == color5 || image == shape5
+            {
+                ViewController.userTwoResponses.append("E")
+            }
+        }
+        
+        if ViewController.placementArray.count == 0
+        {
+            DispatchQueue.main.async {
+                sender.setTitle("1", for: .normal)
+                ViewController.placementArray.append("1")
+            }
+        }
+        else if ViewController.placementArray.contains("1")
+        {
+            if ViewController.placementArray.contains("2")
+            {
+                if ViewController.placementArray.contains("3")
+                {
+                    if ViewController.placementArray.contains("4")
+                    {
+                        if ViewController.placementArray.contains("5")
+                        {
+                            let alert = UIAlertController(title: "Reset Responses?", message: "Would you like to reset your responses and try again?", preferredStyle: .alert)
+                            alert.addAction(UIAlertAction(title: "No", style: .cancel, handler: nil))
+                            alert.addAction(UIAlertAction(title: "Yes", style: .destructive, handler: { (alert) in
+                                DispatchQueue.main.async {
+                                    self.imageSelectionOne.setTitle("", for: .normal)
+                                    self.imageSelectionTwo.setTitle("", for: .normal)
+                                    self.imageSelectionThree.setTitle("", for: .normal)
+                                    self.imageSelectionFour.setTitle("", for: .normal)
+                                    self.imageSelectionFive.setTitle("", for: .normal)
+                                }                                                            
+                                self.setupImageSelectionView()
+                            }))
+                            
+                            self.present(alert, animated: true, completion: nil)
+                        }
+                        else
+                        {
+                            DispatchQueue.main.async {
+                                sender.setTitle("5", for: .normal)
+                            }
+                            ViewController.placementArray.append("5")
+                        }
+                    }
+                    else
+                    {
+                        DispatchQueue.main.async {
+                            sender.setTitle("4", for: .normal)
+                        }
+                        ViewController.placementArray.append("4")
+                    }
+                }
+                else
+                {
+                    DispatchQueue.main.async {
+                        sender.setTitle("3", for: .normal)
+                    }
+                    ViewController.placementArray.append("3")
+                }
+            }
+            else
+            {
+                DispatchQueue.main.async {
+                    sender.setTitle("2", for: .normal)
+                }
+                ViewController.placementArray.append("2")
+            }
+            
+        }
+    }
+    
+    func setupImageSelectionView()
+    {
+        ViewController.placementArray.removeAll()
+        
+        self.imageSelectionOne.isEnabled = true
+        self.imageSelectionTwo.isEnabled = true
+        self.imageSelectionThree.isEnabled = true
+        self.imageSelectionFour.isEnabled = true
+        self.imageSelectionFive.isEnabled = true
+        
+        DispatchQueue.main.async {
+            self.imageSelectionOne.setBackgroundImage(self.landscape1, for: .normal)
+            self.imageSelectionTwo.setBackgroundImage(self.landscape2, for: .normal)
+            self.imageSelectionThree.setBackgroundImage(self.landscape3, for: .normal)
+            self.imageSelectionFour.setBackgroundImage(self.landscape4, for: .normal)
+            self.imageSelectionFive.setBackgroundImage(self.landscape5, for: .normal)
+            
+            self.imageSelectionOne.setTitle("", for: .normal)
+            self.imageSelectionTwo.setTitle("", for: .normal)
+            self.imageSelectionThree.setTitle("", for: .normal)
+            self.imageSelectionFour.setTitle("", for: .normal)
+            self.imageSelectionFive.setTitle("", for: .normal)
+            
+            self.imageSelectionOne.alpha = 1
+            self.imageSelectionTwo.alpha = 1
+            self.imageSelectionThree.alpha = 1
+            self.imageSelectionFour.alpha = 1
+            self.imageSelectionFive.alpha = 1
+        }
+    }
+    
+    func getPoints() -> Int
+    {
+        var totalPoints:Int = 0
+        
+        let user1GroupA = ViewController.userOneRespones[0...4]
+        let user1GroupB = ViewController.userOneRespones[5...9]
+        let user1GroupC = ViewController.userOneRespones[10...14]
+        let user1GroupD = ViewController.userOneRespones[15...19]
+        
+        let user2GroupA = ViewController.userTwoResponses[0...4]
+        let user2GroupB = ViewController.userTwoResponses[5...9]
+        let user2GroupC = ViewController.userTwoResponses[10...14]
+        let user2GroupD = ViewController.userTwoResponses[15...19]
+        
+        let groupAPoints = self.getPointsMethod(masterArray: user1GroupA, comparerArray: user2GroupA)
+        self.sectionOneScore.text = String(groupAPoints)
+        
+        let groupBPoints = self.getPointsMethod(masterArray: user1GroupB, comparerArray: user2GroupB)
+        self.sectionTwoScore.text = String(groupBPoints)
+        
+        let groupCPoints = self.getPointsMethod(masterArray: user1GroupC, comparerArray: user2GroupC)
+        self.sectionThreeScore.text = String(groupCPoints)
+        
+        let groupDPoints = self.getPointsMethod(masterArray: user1GroupD, comparerArray: user2GroupD)
+        self.sectionFourScore.text = String(groupDPoints)
+        
+        totalPoints = groupAPoints + groupBPoints + groupCPoints + groupDPoints
+        
+        return totalPoints
+    }
+    
+    func getPointsMethod(masterArray user1Array: ArraySlice<String>, comparerArray user2Array: ArraySlice<String>) -> Int
+    {
+        var totalPoints:Int = 0
+        var tempUser2Array = [String]()
+        var tempUser1Array = [String]()
+        tempUser1Array = Array(user1Array)
+        tempUser2Array = Array(user2Array)
+        
+        debugPrint(tempUser1Array)
+        debugPrint(tempUser2Array)
+        
+        let answer1 = tempUser1Array[0]
+        let answer2 = tempUser1Array[1]
+        let answer3 = tempUser1Array[2]
+        let answer4 = tempUser1Array[3]
+        
+        let user2_answer1Location = tempUser2Array.index(of: answer1)
+        totalPoints += (4 - user2_answer1Location!)
+        
+        let tempUser2Array1 = tempUser2Array.filter { $0 != answer1 }
+        let user2_answer2Location = tempUser2Array1.index(of: answer2)
+        totalPoints += (3 - user2_answer2Location!)
+        
+        let tempUser2Array2 = tempUser2Array1.filter { $0 != answer2 }
+        let user2_answer3Location = tempUser2Array2.index(of: answer3)
+        totalPoints += (2 - user2_answer3Location!)
+        
+        let tempUser2Array3 = tempUser2Array2.filter { $0 != answer3 }
+        let user2_answer4Location = tempUser2Array3.index(of: answer4)
+        totalPoints += (1 - user2_answer4Location!)
+        
+        return totalPoints
     }
 }
 
