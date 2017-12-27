@@ -44,17 +44,17 @@ class MainViewController: UIViewController
         
         if MainViewController.soundScore != 0
         {
-            sightButton.setTitle("Hear - \(MainViewController.sightScore) pts.", for: .normal)
+            sightButton.setTitle("Hear - \(MainViewController.soundScore) pts.", for: .normal)
         }
         
         if MainViewController.tasteScore != 0
         {
-            sightButton.setTitle("Taste - \(MainViewController.sightScore) pts.", for: .normal)
+            sightButton.setTitle("Taste - \(MainViewController.tasteScore) pts.", for: .normal)
         }
         
         if MainViewController.touchScore != 0
         {
-            sightButton.setTitle("Touch - \(MainViewController.sightScore) pts.", for: .normal)
+            sightButton.setTitle("Touch - \(MainViewController.touchScore) pts.", for: .normal)
         }
     }
 }

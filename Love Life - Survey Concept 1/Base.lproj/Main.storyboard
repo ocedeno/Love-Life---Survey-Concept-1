@@ -19,10 +19,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Smell View Controller-->
+        <!--Hear View Controller-->
         <scene sceneID="c3g-vq-Icx">
             <objects>
-                <viewController id="Jeg-96-TFm" customClass="SmellViewController" customModule="Love_Life___Survey_Concept_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jeg-96-TFm" customClass="HearViewController" customModule="Love_Life___Survey_Concept_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Iq-q7-tnX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -136,6 +136,7 @@
                                                     <color key="titleShadowColor" red="0.2156862745" green="0.20392156859999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="makeSelectionWithSender:" destination="Jeg-96-TFm" eventType="touchUpInside" id="2V2-uT-LCo"/>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HpQ-EE-qUw"/>
                                                 </connections>
                                             </button>
@@ -147,6 +148,7 @@
                                                     <color key="titleShadowColor" red="0.2156862745" green="0.20392156859999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="makeSelectionWithSender:" destination="Jeg-96-TFm" eventType="touchUpInside" id="IsM-kf-tiy"/>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qLq-ju-VzW"/>
                                                 </connections>
                                             </button>
@@ -160,6 +162,7 @@
                                             <color key="titleShadowColor" red="0.2156862745" green="0.20392156859999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="makeSelectionWithSender:" destination="Jeg-96-TFm" eventType="touchUpInside" id="CTJ-wp-3CV"/>
                                             <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iwd-bF-f0W"/>
                                         </connections>
                                     </button>
@@ -175,6 +178,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1sM-Ad-UoB"/>
+                                                    <action selector="makeSelectionWithSender:" destination="Jeg-96-TFm" eventType="touchUpInside" id="TOh-PB-190"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uh8-si-1O7">
@@ -185,6 +189,7 @@
                                                     <color key="titleShadowColor" red="0.2156862745" green="0.20392156859999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="makeSelectionWithSender:" destination="Jeg-96-TFm" eventType="touchUpInside" id="Cin-IN-hFN"/>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="x7w-0N-AqD"/>
                                                 </connections>
                                             </button>
@@ -202,6 +207,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="buttonSelected" destination="Jeg-96-TFm" eventType="touchUpInside" id="0QP-Xd-7uQ"/>
                                     <action selector="buttonSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="keT-BX-YTz"/>
                                 </connections>
                             </button>
@@ -227,6 +233,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bvf-lK-xsR"/>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="9ZV-0F-PS8" id="cFi-4Q-cxk"/>
+                        <outlet property="imageSelectionFive" destination="Uh8-si-1O7" id="hCb-O9-Cgp"/>
+                        <outlet property="imageSelectionFour" destination="ux5-WJ-4iz" id="9R5-dn-j0w"/>
+                        <outlet property="imageSelectionOne" destination="2gl-tE-6aT" id="Lal-Qx-s93"/>
+                        <outlet property="imageSelectionThree" destination="MWX-vQ-C67" id="SBY-MV-yT3"/>
+                        <outlet property="imageSelectionTwo" destination="bZH-QU-cFI" id="f7F-zH-RwZ"/>
+                        <outlet property="sectionFourScore" destination="RJQ-oq-0RZ" id="sez-RO-ti6"/>
+                        <outlet property="sectionOneScore" destination="zbS-Rc-8H3" id="1DR-wD-pIS"/>
+                        <outlet property="sectionThreeScore" destination="c59-iG-lUX" id="nRV-vI-dZh"/>
+                        <outlet property="sectionTwoScore" destination="j3G-4f-LxO" id="Jbd-f9-4vi"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g1v-LZ-C5G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -346,6 +364,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dt6-Ra-0Fk"/>
+                                    <action selector="buttonSelected" destination="Prh-l6-ADT" eventType="touchUpInside" id="PEZ-6W-G7m"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="O4W-nx-e2X">
@@ -363,6 +382,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="r1b-5C-hcz"/>
+                                                    <action selector="makeSelectionWithSender:" destination="Prh-l6-ADT" eventType="touchUpInside" id="sVZ-jV-Pll"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H9P-P0-LmD" userLabel="SelectionTwo">
@@ -373,6 +393,7 @@
                                                     <color key="titleShadowColor" red="0.2156862745" green="0.20392156859999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="makeSelectionWithSender:" destination="Prh-l6-ADT" eventType="touchUpInside" id="GHY-Zz-Hmb"/>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ycu-2d-Klw"/>
                                                 </connections>
                                             </button>
@@ -387,6 +408,7 @@
                                         </state>
                                         <connections>
                                             <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Fw5-er-jzN"/>
+                                            <action selector="makeSelectionWithSender:" destination="Prh-l6-ADT" eventType="touchUpInside" id="MSJ-QR-61L"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="14a-Zw-Vqm" userLabel="Bottom Selection Stack View">
@@ -401,6 +423,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N33-Bj-uz5"/>
+                                                    <action selector="makeSelectionWithSender:" destination="Prh-l6-ADT" eventType="touchUpInside" id="y6x-I6-N2w"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJd-Xf-ezu">
@@ -411,6 +434,7 @@
                                                     <color key="titleShadowColor" red="0.2156862745" green="0.20392156859999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="makeSelectionWithSender:" destination="Prh-l6-ADT" eventType="touchUpInside" id="bp9-4c-G4f"/>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hda-Gu-aoM"/>
                                                 </connections>
                                             </button>
@@ -440,6 +464,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="b5T-Dj-jPM"/>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="Qqc-v9-vFi" id="DgG-gU-tzj"/>
+                        <outlet property="imageSelectionFive" destination="FJd-Xf-ezu" id="yPF-Am-xvT"/>
+                        <outlet property="imageSelectionFour" destination="S7i-mm-aeh" id="9cQ-pB-J4m"/>
+                        <outlet property="imageSelectionOne" destination="Fs9-K5-PIo" id="7n0-OE-5Gc"/>
+                        <outlet property="imageSelectionThree" destination="AFe-rc-2GW" id="FBY-CA-llq"/>
+                        <outlet property="imageSelectionTwo" destination="H9P-P0-LmD" id="WjN-lD-xfv"/>
+                        <outlet property="sectionFourScore" destination="87g-t1-L0V" id="4P2-7g-cPS"/>
+                        <outlet property="sectionOneScore" destination="bhI-Cn-Jm0" id="aAX-L0-koj"/>
+                        <outlet property="sectionThreeScore" destination="E6g-5d-0eX" id="l7n-Vv-2jC"/>
+                        <outlet property="sectionTwoScore" destination="N9o-Rk-uWu" id="IJR-vl-KTN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="95P-pM-dpa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
