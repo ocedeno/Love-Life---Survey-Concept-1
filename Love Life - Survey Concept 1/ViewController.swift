@@ -59,6 +59,19 @@ class ViewController: UIViewController
     
     @IBAction func buttonSelected()
     {
+        guard self.actionButton.currentTitle == "Next" else
+        {
+            self.sectionOneScore.text = ""
+            self.sectionTwoScore.text = ""
+            self.sectionThreeScore.text = ""
+            self.sectionFourScore.text = ""
+            
+            DispatchQueue.main.async {
+                self.actionButton.setTitle("Next", for: .normal)
+            }
+            return self.setupImageSelectionView()
+        }
+        
         guard ViewController.placementArray.contains("5") else
         {
             let alert = UIAlertController(title: "Complete Survey", message: "You have not finished this section. Make sure you have selected all 5 images in order of your preference.", preferredStyle: .alert)
@@ -153,12 +166,10 @@ class ViewController: UIViewController
             }
             else
             {
-                
-                debugPrint(ViewController.userOneRespones)
-                debugPrint(ViewController.userTwoResponses)
-                print("\n\n")
                 let x = getPoints()
-                debugPrint(x)
+                DispatchQueue.main.async {
+                    self.actionButton.setTitle("\(x)", for: .normal)
+                }
                 ViewController.userOneIsActive = true
             }
            
@@ -376,9 +387,6 @@ class ViewController: UIViewController
         var tempUser1Array = [String]()
         tempUser1Array = Array(user1Array)
         tempUser2Array = Array(user2Array)
-        
-        debugPrint(tempUser1Array)
-        debugPrint(tempUser2Array)
         
         let answer1 = tempUser1Array[0]
         let answer2 = tempUser1Array[1]
