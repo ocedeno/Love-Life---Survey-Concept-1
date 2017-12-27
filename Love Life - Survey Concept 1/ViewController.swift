@@ -59,12 +59,12 @@ class ViewController: UIViewController
     
     @IBAction func buttonSelected()
     {
-        guard self.actionButton.currentTitle == "Next" else
+        guard self.actionButton.currentTitle == "User 1 Select" || self.actionButton.currentTitle == "User 2 Select" else
         {
-            self.sectionOneScore.text = ""
-            self.sectionTwoScore.text = ""
-            self.sectionThreeScore.text = ""
-            self.sectionFourScore.text = ""
+            self.sectionOneScore.text = "0"
+            self.sectionTwoScore.text = "0"
+            self.sectionThreeScore.text = "0"
+            self.sectionFourScore.text = "0"
             
             DispatchQueue.main.async {
                 self.actionButton.setTitle("Next", for: .normal)
@@ -162,6 +162,7 @@ class ViewController: UIViewController
             
             if ViewController.userOneIsActive
             {
+                self.actionButton.setTitle("User 2 Select", for: .normal)
                 ViewController.userOneIsActive = false
             }
             else
@@ -277,7 +278,8 @@ class ViewController: UIViewController
                                     self.imageSelectionThree.setTitle("", for: .normal)
                                     self.imageSelectionFour.setTitle("", for: .normal)
                                     self.imageSelectionFive.setTitle("", for: .normal)
-                                }                                                            
+                                }
+                                self.actionButton.setTitle("User 1 Select", for: .normal)
                                 self.setupImageSelectionView()
                             }))
                             
@@ -346,6 +348,8 @@ class ViewController: UIViewController
             self.imageSelectionThree.alpha = 1
             self.imageSelectionFour.alpha = 1
             self.imageSelectionFive.alpha = 1
+            
+            self.actionButton.setTitle("User 1 Select", for: .normal)
         }
     }
     
