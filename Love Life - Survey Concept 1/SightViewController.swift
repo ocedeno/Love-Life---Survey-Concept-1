@@ -174,6 +174,7 @@ class SightViewController: UIViewController
                 DispatchQueue.main.async {
                     self.actionButton.setTitle("\(x) pts - Move On", for: .normal)
                 }
+                MainViewController.sightScore = x
                 SightViewController.userOneIsActive = true
             }
            

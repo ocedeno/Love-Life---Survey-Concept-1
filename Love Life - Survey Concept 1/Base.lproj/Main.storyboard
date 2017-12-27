@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="Q8l-dB-59M">
             <objects>
-                <viewController id="mfD-YU-8CA" sceneMemberID="viewController">
+                <viewController id="mfD-YU-8CA" customClass="MainViewController" customModule="Love_Life___Survey_Concept_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QIf-W9-5Oc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -84,6 +84,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mao-4a-KSc"/>
                     </view>
+                    <connections>
+                        <outlet property="sightButton" destination="98a-Iu-cbD" id="58B-14-Dru"/>
+                        <outlet property="smellButton" destination="iC2-82-5sO" id="QD5-8h-tDi"/>
+                        <outlet property="soundButton" destination="jtA-zH-NjL" id="2Cg-bb-cpP"/>
+                        <outlet property="tasteButton" destination="1BK-oN-LEp" id="6g1-lQ-ofu"/>
+                        <outlet property="touchButton" destination="lOZ-or-bl2" id="uwI-BI-Ae8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GSD-yP-Uco" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
