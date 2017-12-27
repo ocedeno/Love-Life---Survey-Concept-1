@@ -599,6 +599,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q7x-9O-aQa"/>
+                                                    <action selector="makeSelectionWithSender:" destination="EnR-Yg-0i7" eventType="touchUpInside" id="whZ-oS-dph"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TSn-d9-tP6" userLabel="SelectionTwo">
@@ -609,6 +610,7 @@
                                                     <color key="titleShadowColor" red="0.2156862745" green="0.20392156859999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="makeSelectionWithSender:" destination="EnR-Yg-0i7" eventType="touchUpInside" id="Qyu-RX-66s"/>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qaw-fg-KqC"/>
                                                 </connections>
                                             </button>
@@ -622,6 +624,7 @@
                                             <color key="titleShadowColor" red="0.2156862745" green="0.20392156859999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="makeSelectionWithSender:" destination="EnR-Yg-0i7" eventType="touchUpInside" id="6Zq-cW-Zb7"/>
                                             <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qoV-zz-wZW"/>
                                         </connections>
                                     </button>
@@ -637,6 +640,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pcd-k5-inu"/>
+                                                    <action selector="makeSelectionWithSender:" destination="EnR-Yg-0i7" eventType="touchUpInside" id="QHb-Ji-jFE"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Em9-g2-7HT">
@@ -647,6 +651,7 @@
                                                     <color key="titleShadowColor" red="0.2156862745" green="0.20392156859999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
+                                                    <action selector="makeSelectionWithSender:" destination="EnR-Yg-0i7" eventType="touchUpInside" id="O7K-9H-15G"/>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nvv-oA-kTi"/>
                                                 </connections>
                                             </button>
@@ -664,6 +669,7 @@
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
+                                    <action selector="buttonSelected" destination="EnR-Yg-0i7" eventType="touchUpInside" id="gfp-Aw-u3H"/>
                                     <action selector="buttonSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="kkn-8b-CNF"/>
                                 </connections>
                             </button>
@@ -689,6 +695,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ojh-hl-Hb1"/>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="1H3-9w-S5P" id="WaO-We-rOF"/>
+                        <outlet property="imageSelectionFive" destination="Em9-g2-7HT" id="cGz-1W-Z9m"/>
+                        <outlet property="imageSelectionFour" destination="90e-q0-p0a" id="VgK-iT-hbt"/>
+                        <outlet property="imageSelectionOne" destination="3Tc-YD-vQi" id="5Dy-gk-lci"/>
+                        <outlet property="imageSelectionThree" destination="kaU-9g-z7b" id="9El-nQ-iHc"/>
+                        <outlet property="imageSelectionTwo" destination="TSn-d9-tP6" id="Wg7-qk-dXx"/>
+                        <outlet property="sectionFourScore" destination="p6m-9j-SM8" id="lnT-AD-cij"/>
+                        <outlet property="sectionOneScore" destination="BF3-eT-HjD" id="d8c-VB-iGb"/>
+                        <outlet property="sectionThreeScore" destination="p5w-DS-JlA" id="jsD-fy-fJ1"/>
+                        <outlet property="sectionTwoScore" destination="Zbl-Na-IcV" id="Yhi-2n-6PZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mWm-4F-n0N" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -812,6 +830,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="672-KQ-Ta2"/>
+                                                    <action selector="makeSelectionWithSender:" destination="nBv-v5-CHJ" eventType="touchUpInside" id="kQ4-NB-7mK"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VEE-jL-sNE" userLabel="SelectionTwo">
@@ -823,6 +842,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0cb-E6-ht5"/>
+                                                    <action selector="makeSelectionWithSender:" destination="nBv-v5-CHJ" eventType="touchUpInside" id="Qdl-83-5xi"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -835,6 +855,7 @@
                                             <color key="titleShadowColor" red="0.2156862745" green="0.20392156859999999" blue="0.20784313730000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="makeSelectionWithSender:" destination="nBv-v5-CHJ" eventType="touchUpInside" id="Czv-vH-Zzb"/>
                                             <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mNF-UD-fyk"/>
                                         </connections>
                                     </button>
@@ -850,6 +871,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ndp-dc-M12"/>
+                                                    <action selector="makeSelectionWithSender:" destination="nBv-v5-CHJ" eventType="touchUpInside" id="agI-4v-1eT"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFA-Nf-CmH">
@@ -861,6 +883,7 @@
                                                 </state>
                                                 <connections>
                                                     <action selector="makeSelectionWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2Wu-5r-Mao"/>
+                                                    <action selector="makeSelectionWithSender:" destination="nBv-v5-CHJ" eventType="touchUpInside" id="rCp-KU-tTb"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -878,6 +901,7 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonSelected" destination="BYZ-38-t0r" eventType="touchUpInside" id="GFQ-PL-Jxl"/>
+                                    <action selector="buttonSelected" destination="nBv-v5-CHJ" eventType="touchUpInside" id="oKn-Qs-N4o"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -902,6 +926,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DxV-3Z-s9J"/>
                     </view>
+                    <connections>
+                        <outlet property="actionButton" destination="qXA-Hz-jgL" id="0Ki-2e-tCL"/>
+                        <outlet property="imageSelectionFive" destination="JFA-Nf-CmH" id="91K-jt-cdH"/>
+                        <outlet property="imageSelectionFour" destination="7nP-Kg-zhM" id="Koc-nt-BYs"/>
+                        <outlet property="imageSelectionOne" destination="GvN-rm-6tR" id="gwx-Tz-I0o"/>
+                        <outlet property="imageSelectionThree" destination="PD2-sa-MD5" id="3Ga-Yw-EEx"/>
+                        <outlet property="imageSelectionTwo" destination="VEE-jL-sNE" id="ECd-i1-Ag2"/>
+                        <outlet property="sectionFourScore" destination="PPV-pj-Vcv" id="jBP-2h-x1x"/>
+                        <outlet property="sectionOneScore" destination="0ZT-02-YAh" id="hQt-C2-lLp"/>
+                        <outlet property="sectionThreeScore" destination="9YO-YM-KxR" id="wXT-zm-24c"/>
+                        <outlet property="sectionTwoScore" destination="3Jp-D4-u4p" id="w8r-Al-pxd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XT5-8z-wyl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

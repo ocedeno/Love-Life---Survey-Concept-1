@@ -39,22 +39,22 @@ class MainViewController: UIViewController
         
         if MainViewController.smellScore != 0
         {
-            sightButton.setTitle("Smell - \(MainViewController.smellScore) pts.", for: .normal)
+            smellButton.setTitle("Smell - \(MainViewController.smellScore) pts.", for: .normal)
         }
         
         if MainViewController.soundScore != 0
         {
-            sightButton.setTitle("Hear - \(MainViewController.soundScore) pts.", for: .normal)
+            soundButton.setTitle("Hear - \(MainViewController.soundScore) pts.", for: .normal)
         }
         
         if MainViewController.tasteScore != 0
         {
-            sightButton.setTitle("Taste - \(MainViewController.tasteScore) pts.", for: .normal)
+            tasteButton.setTitle("Taste - \(MainViewController.tasteScore) pts.", for: .normal)
         }
         
         if MainViewController.touchScore != 0
         {
-            sightButton.setTitle("Touch - \(MainViewController.touchScore) pts.", for: .normal)
+            touchButton.setTitle("Touch - \(MainViewController.touchScore) pts.", for: .normal)
         }
     }
 }
