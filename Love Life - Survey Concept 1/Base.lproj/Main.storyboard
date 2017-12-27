@@ -19,10 +19,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Hear View Controller-->
+        <!--Smell View Controller-->
         <scene sceneID="c3g-vq-Icx">
             <objects>
-                <viewController id="Jeg-96-TFm" customClass="HearViewController" customModule="Love_Life___Survey_Concept_1" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Jeg-96-TFm" customClass="SmellViewController" customModule="Love_Life___Survey_Concept_1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Iq-q7-tnX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -952,10 +952,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="Vmb-R4-QtT">
-                                <rect key="frame" x="32" y="60" width="311" height="686"/>
+                                <rect key="frame" x="32" y="60" width="311" height="664"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="98a-Iu-cbD">
-                                        <rect key="frame" x="0.0" y="0.0" width="311" height="111.66666666666667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="311" height="107.33333333333333"/>
                                         <color key="backgroundColor" red="0.9192116857" green="0.32311135698013804" blue="0.36458680549898947" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <state key="normal" title="Sight">
@@ -966,7 +966,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jtA-zH-NjL">
-                                        <rect key="frame" x="0.0" y="143.66666666666666" width="311" height="111.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="139.33333333333334" width="311" height="107"/>
                                         <color key="backgroundColor" red="0.9192116857" green="0.42028038256608435" blue="0.43449962604150133" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <state key="normal" title="Hear">
@@ -977,7 +977,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iC2-82-5sO">
-                                        <rect key="frame" x="0.0" y="287.33333333333331" width="311" height="111.33333333333331"/>
+                                        <rect key="frame" x="0.0" y="278.33333333333331" width="311" height="107.33333333333331"/>
                                         <color key="backgroundColor" red="0.9192116857" green="0.59064242120344201" blue="0.65545581404564679" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <state key="normal" title="Smell">
@@ -988,7 +988,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lOZ-or-bl2">
-                                        <rect key="frame" x="0.0" y="430.66666666666669" width="311" height="111.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="417.66666666666669" width="311" height="107.00000000000006"/>
                                         <color key="backgroundColor" red="0.9192116857" green="0.69241609659488279" blue="0.74744971436458751" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <state key="normal" title="Touch">
@@ -999,7 +999,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1BK-oN-LEp">
-                                        <rect key="frame" x="0.0" y="574.33333333333337" width="311" height="111.66666666666663"/>
+                                        <rect key="frame" x="0.0" y="556.66666666666663" width="311" height="107.33333333333337"/>
                                         <color key="backgroundColor" red="0.9192116857" green="0.76112151234859393" blue="0.77590586213940316" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
                                         <state key="normal" title="Taste">
@@ -1011,13 +1011,25 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MYg-kn-Zsr">
+                                <rect key="frame" x="8" y="740" width="359" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qk5-ap-qww"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.9192116857" green="0.81038290999999996" blue="0.78602331169999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
+                            <constraint firstItem="MYg-kn-Zsr" firstAttribute="top" secondItem="Vmb-R4-QtT" secondAttribute="bottom" constant="16" id="5tx-Vd-dWe"/>
+                            <constraint firstItem="MYg-kn-Zsr" firstAttribute="leading" secondItem="mao-4a-KSc" secondAttribute="leading" constant="8" id="8OE-X0-tAA"/>
                             <constraint firstItem="Vmb-R4-QtT" firstAttribute="top" secondItem="mao-4a-KSc" secondAttribute="top" constant="16" id="HHD-BM-MSX"/>
-                            <constraint firstItem="mao-4a-KSc" firstAttribute="bottom" secondItem="Vmb-R4-QtT" secondAttribute="bottom" constant="32" id="Ib8-ke-rbi"/>
                             <constraint firstItem="mao-4a-KSc" firstAttribute="trailing" secondItem="Vmb-R4-QtT" secondAttribute="trailing" constant="32" id="Kgy-dq-1GM"/>
                             <constraint firstItem="Vmb-R4-QtT" firstAttribute="leading" secondItem="mao-4a-KSc" secondAttribute="leading" constant="32" id="U6Q-cw-Pub"/>
+                            <constraint firstItem="mao-4a-KSc" firstAttribute="trailing" secondItem="MYg-kn-Zsr" secondAttribute="trailing" constant="8" id="WEw-49-kBV"/>
+                            <constraint firstItem="mao-4a-KSc" firstAttribute="bottom" secondItem="MYg-kn-Zsr" secondAttribute="bottom" constant="8" id="zyT-EC-ghl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mao-4a-KSc"/>
                     </view>
@@ -1026,6 +1038,7 @@
                         <outlet property="smellButton" destination="iC2-82-5sO" id="QD5-8h-tDi"/>
                         <outlet property="soundButton" destination="jtA-zH-NjL" id="2Cg-bb-cpP"/>
                         <outlet property="tasteButton" destination="1BK-oN-LEp" id="6g1-lQ-ofu"/>
+                        <outlet property="totalPointsLabel" destination="MYg-kn-Zsr" id="9ra-EQ-bWz"/>
                         <outlet property="touchButton" destination="lOZ-or-bl2" id="uwI-BI-Ae8"/>
                     </connections>
                 </viewController>

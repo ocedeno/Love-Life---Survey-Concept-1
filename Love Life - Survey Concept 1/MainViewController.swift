@@ -21,6 +21,7 @@ class MainViewController: UIViewController
     @IBOutlet weak var soundButton: UIButton!
     @IBOutlet weak var tasteButton: UIButton!
     @IBOutlet weak var touchButton: UIButton!
+    @IBOutlet weak var totalPointsLabel: UILabel!
     
     override func viewDidLoad()
     {
@@ -55,6 +56,12 @@ class MainViewController: UIViewController
         if MainViewController.touchScore != 0
         {
             touchButton.setTitle("Touch - \(MainViewController.touchScore) pts.", for: .normal)
+        }
+        
+        if MainViewController.sightScore != 0 && MainViewController.smellScore != 0 && MainViewController.soundScore != 0 && MainViewController.tasteScore != 0 && MainViewController.touchScore != 0
+        {
+            totalPointsLabel.text = String((MainViewController.sightScore + MainViewController.smellScore + MainViewController.soundScore + MainViewController.tasteScore + MainViewController.touchScore) / 5.0) + " - average score"
+            
         }
     }
 }
